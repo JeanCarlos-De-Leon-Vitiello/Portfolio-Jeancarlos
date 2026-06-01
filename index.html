@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean-Carlos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="page-loader.js" defer></script>
+    <script src="hamburger.js" defer></script>
+    <script src="case-popover.js" defer></script>
+</head>
+<body>
+    <!-- <div id="page-loader" aria-label="Pagina laden">
+        <div class="loader-code" aria-hidden="true">
+            <span class="loader-brace">&lbrace;</span>
+            <span class="loader-word" data-loader-text="Jean-Carlos">Jean-Carlos</span>
+            <span class="loader-brace">&rbrace;</span>
+        </div>
+    </div> -->
+
+    <header>
+        <nav>
+            <a href="/">Jean-Carlo's<br>Web design & Dev</a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/projecten">Projecten</a></li>
+                <li><a href="/about-me">About Me</a></li>
+                <li class="contact-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="39" viewBox="0 0 23 39" fill="none">
+                    <path d="M9.98524 38.0607C10.571 38.6464 11.5208 38.6464 12.1066 38.0607L21.6525 28.5147C22.2383 27.9289 22.2383 26.9792 21.6525 26.3934C21.0667 25.8076 20.117 25.8076 19.5312 26.3934L11.0459 34.8787L2.56062 26.3934C1.97483 25.8076 1.02508 25.8076 0.439296 26.3934C-0.146491 26.9792 -0.146491 27.9289 0.439295 28.5147L9.98524 38.0607ZM11.0459 0L9.5459 -6.55671e-08L9.5459 37L11.0459 37L12.5459 37L12.5459 6.55671e-08L11.0459 0Z" fill="black"/>
+                    </svg>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+        
+        <main>
+            <section class="hero-section">
+                <h1>Ik ben<br>Jean-Carlos</h1>
+                <p>Derdejaars CMD-student met een passie voor UX design en development</p>
+
+                <div id="scroll-down">
+                    <span class="borderVertical"></span>
+                    <a href="#intro-message">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="39" viewBox="0 0 23 39" fill="none">
+                        <path d="M9.98524 38.0607C10.571 38.6464 11.5208 38.6464 12.1066 38.0607L21.6525 28.5147C22.2383 27.9289 22.2383 26.9792 21.6525 26.3934C21.0667 25.8076 20.117 25.8076 19.5312 26.3934L11.0459 34.8787L2.56062 26.3934C1.97483 25.8076 1.02508 25.8076 0.439296 26.3934C-0.146491 26.9792 -0.146491 27.9289 0.439295 28.5147L9.98524 38.0607ZM11.0459 0L9.5459 -6.55671e-08L9.5459 37L11.0459 37L12.5459 37L12.5459 6.55671e-08L11.0459 0Z" fill="black"/>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+
+            <section id="intro-message">
+                <p>Ik ontwerp niet alleen <span>digitale producten</span>, ik onderzoek hoe mensen ze gebruiken. Als CMD-student combineer ik <span>UX-research</span>, <span>usability testing</span> en <code><span class="code-brace">&lbrace;</span><span class="code-word"> development </span><span class="code-brace">&rbrace;</span></code> om gebruiksvriendelijke oplossingen te creeren die zowel esthetisch als functioneel zijn.</p>
+            </section>
+
+            <section class="projects">
+                <article>
+                    <div class="info-div">
+                        <p>UX/UI Research <span>(Stage)</span></p>
+                        <h2>klm</h2>
+                        <p>UX/UI-onderzoek voor het PCHS-systeem van KLM.</p>
+                        <a href="#" class="see-case" data-title="KLM" data-type="UX/UI Research" data-description="Een project waarin ik onderzocht hoe gebruikers sneller en duidelijker hun vluchtinformatie kunnen vinden." data-role="UX research, wireframes en usability testing" data-tools="Figma, HTML, CSS" data-image="images/at5.webp" data-link="#">
+                            <span class="dot"></span>
+                            <span>Bekijk Project</span>
+                        </a>
+                    </div>
+
+                    <div class="image-div">
+                        <img src="images/at5.webp" alt={title}>
+                    </div>
+                </article>
+
+                <article class="article-reverse">
+                    <div class="info-div">
+                        <p>UX/UI Redesign</p>
+                        <h2>bprocare</h2>
+                        <p>Herontwerp van de BproCare-app en de gebruikerservaring vereenvoudigen.</p>
+                        <a href="#" class="see-case" data-title="Bprocare" data-type="UX/UI Design" data-description="Een digitaal concept voor een zorggerichte omgeving waarbij vertrouwen, overzicht en gebruiksgemak centraal staan." data-role="Interface design, user flows en visuele uitwerking" data-tools="Figma, CSS, JavaScript" data-image="images/at5.webp" data-link="#">
+                            <span class="dot"></span>
+                            <span>Bekijk Project</span>
+                        </a>
+                    </div>
+
+                    <div class="image-div">
+                        <img src="images/at5.webp" alt={title2}>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="info-div">
+                        <p>webdesign & development</p>
+                        <h2>Moodflix</h2>
+                        <p>Ontwikkeling van een website die meerdere API's combineert voor gepersonaliseerde content.</p>
+                        <a href="#" class="see-case" data-title="AT5" data-type="Frontend Development" data-description="Een project gericht op het vertalen van content en nieuws naar een duidelijke, responsive webpagina." data-role="HTML structuur, CSS styling en interactie" data-tools="HTML, CSS, JavaScript" data-image="images/at5.webp" data-link="#">
+                            <span class="dot"></span>
+                            <span>Bekijk Project</span>
+                        </a>
+                    </div>
+
+                    <div class="image-div">
+                        <img src="images/at5.webp" alt={title}>
+                    </div>
+                </article>
+
+                <article class="article-reverse">
+                    <div class="info-div">
+                        <p>Human-Centered Design</p>
+                        <h2>Page Marker</h2>
+                        <p>Ontwerp van een toegankelijk paneel afgestemd op de behoeften van een persoon met een visuele beperking.</p>
+                        <a href="#" class="see-case" data-title="Page Marker" data-type="Human-Centered Design" data-description="Een concept waarin de gebruiker centraal staat en de interactie helpt om informatie makkelijker te markeren en terug te vinden." data-role="Conceptontwikkeling, prototyping en testen" data-tools="Figma, UX research, Prototyping" data-image="images/at5.webp" data-link="#">
+                            <span class="dot"></span>
+                            <span>Bekijk Project</span>
+                        </a>
+                    </div>
+
+                    <div class="image-div">
+                        <img src="images/at5.webp" alt={title2}>
+                    </div>
+                </article>
+            </section>
+
+            <section id="scroll-container">
+                <div class="scroll-scene">
+                    <div class="scroll-text">
+                        <h2>view my <br> favorite projects</h2>
+                        <p>Welcome to the overview of my favorite projects! Here, you’ll get a glimpse of the work I’m most proud of. These projects reflect my passion, skills, and commitment to quality.</p>
+                        <a href="/projecten">Explore all Projects</a>
+                    </div>
+
+                    <div class="image-group">
+                        <img src="images/at5.webp" alt="">
+                        <img src="images/at5.webp" alt="">
+                        <img src="images/at5.webp" alt="">
+                        <img src="images/at5.webp" alt="">
+                        <img src="images/at5.webp" alt="">
+                        <img src="images/at5.webp" alt="">
+                        <img src="images/at5.webp" alt="">
+                        <img src="images/at5.webp" alt="">
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    <div class="case-popover" id="case-popover" popover="auto" role="dialog" aria-labelledby="case-popover-title">
+        <div class="case-popover-content">
+            <button class="case-popover-close" type="button" popovertarget="case-popover" popovertargetaction="hide" aria-label="Sluit popover">x</button>
+            <p id="case-popover-type">Case study</p>
+            <img id="case-popover-image" src="" alt="" hidden>
+            <h2 id="case-popover-title">Project</h2>
+            <p id="case-popover-description">Hier kan je later de details van deze case plaatsen.</p>
+            <h3>Mijn rol</h3>
+            <p id="case-popover-role"></p>
+            <h3>Tools</h3>
+            <p id="case-popover-tools"></p>
+            <a id="case-popover-link" href="#" target="_blank" rel="noopener noreferrer">Bekijk eindresultaat</a>
+        </div>
+    </div>
+
+
+    <footer>
+        <div>
+            <h2>Jean-Carlo's<br>Web design & Dev</h2>
+            <p>Learning, building, and documenting my growth during the Web Design and Development minor.</p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+            <a href="/">Home</a>
+            <a href="/projecten">Projecten</a>
+            <a href="/about-me">About Me</a>
+            <a href="/contact">Contact</a>
+        </nav>
+
+        <p>© 2026 Jean-Carlo. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
