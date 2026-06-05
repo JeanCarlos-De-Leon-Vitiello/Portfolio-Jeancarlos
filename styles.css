@@ -133,6 +133,7 @@ main > * + * {
     --section-spacing: 0 var(--page-padding);
     --content-max-with: 72rem;
     --content-padding: 5rem var(--page-padding);
+    --header-height: 10vh;
 }
 
 
@@ -144,7 +145,7 @@ main > * + * {
 
 /* Header code */
 header {
-    height: 10vh;
+    height: var(--header-height);
     width: 100%;
     align-content: center;
     padding: var(--section-spacing);
@@ -297,8 +298,11 @@ header nav{
 /* hero section */
 .hero-section {
         margin-inline: calc(var(--page-padding) * -1);
-        min-height: 100vh;
-        background-color: var(--primairy-color);
+        position: relative;
+        min-height: calc(100vh - var(--header-height));
+        background-color: color-mix(in srgb, var(--primairy-color) 82%, transparent);
+        backdrop-filter: blur(32px);
+        -webkit-backdrop-filter: blur(32px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -321,7 +325,7 @@ header nav{
             align-items: center;
             gap: 1em;
             position: absolute;
-            top: 82%;
+            bottom: clamp(1.5rem, 4vh, 3rem);
         }
 
         p {
@@ -460,7 +464,7 @@ header nav{
         right: clamp(1rem, 5vw, 4rem);
         width: clamp(8rem, 22vw, 18rem);
         aspect-ratio: 16 / 10;
-        background-image: var(--project-image);
+        background-image: var(--project-before-image);
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -473,23 +477,44 @@ header nav{
     }
 
     article::after {
+        background-image: var(--project-after-image);
         right: clamp(4rem, 13vw, 12rem);
         transform: translateY(-15%) rotate(0deg) scale(0.88);
         transition-delay: 0.06s;
+    }
+
+    .project-klm {
+        --project-before-image: url("images/KLM-Logo.jpg");
+        --project-after-image: url("images/mijn-klm-selfie.jpg");
+    }
+
+    .project-bprocare {
+        --project-before-image: url("images/figmabpro.png");
+        --project-after-image: url("images/logobpro.png");
+    }
+
+    .project-moodflix {
+        --project-before-image: url("images/cast.png");
+        --project-after-image: url("images/film.png");
+    }
+
+    .project-pagemarker {
+        --project-before-image: url("images/homepagehulppaneel.png");
+        --project-after-image: url("images/hulppaneel.png");
     }
 
     article:hover::before {
         opacity: 0.9;
         filter: saturate(1.08);
         box-shadow: 0 0 2rem color-mix(in srgb, var(--accent-color) 45%, transparent);
-        transform: translate(22%, -138%) rotate(12deg) scale(1);
+        transform: translate(10%, -150%) rotate(10deg) scale(1);
     }
 
     article:hover::after {
         opacity: 0.7;
         filter: saturate(1.08);
         box-shadow: 0 0 1.75rem color-mix(in srgb, var(--accent-color) 35%, transparent);
-        transform: translate(-22%, -128%) rotate(-12deg) scale(0.95);
+        transform: translate(-10%, -140%) rotate(-10deg) scale(0.95);
     }
 
     article + article {
@@ -568,9 +593,8 @@ header nav{
     }
 
     .image-div {
-        width: 48%;
-        max-height: 70vh;
-        aspect-ratio: 16 / 10;
+        width: 56%;
+        height: clamp(16rem, 28vw, 26rem);
         overflow: hidden;
         border-radius: 10px;
         box-shadow: 0 0 0 rgba(0, 0, 0, 0);
@@ -601,9 +625,11 @@ header nav{
         margin: auto;
         padding: 0;
         overflow: auto;
-        border: 1px solid color-mix(in srgb, var(--secondary-color) 35%, transparent);
+        border: 1px solid rgba(255, 255, 255, 0.28);
         border-radius: 8px;
-        background-color: var(--primairy-color);
+        background-color: rgba(20, 20, 20, 0.68);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
         color: var(--secondary-color);
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.45);
     }
@@ -673,6 +699,32 @@ header nav{
         line-height: 1.6;
     }
 
+    #case-popover-tools {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+        margin-top: 0.75rem;
+    }
+
+    #case-popover-tools span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2.35rem;
+        padding-inline: 1rem;
+        border: 1px solid color-mix(in srgb, var(--secondary-color) 45%, transparent);
+        border-radius: 100px;
+        color: var(--secondary-color);
+        background-color: color-mix(in srgb, var(--secondary-color) 8%, transparent);
+        transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+    }
+
+    #case-popover-tools span:hover {
+        border-color: var(--accent-color);
+        background-color: var(--accent-color);
+        color: var(--primairy-color);
+    }
+
     #case-popover-link {
         position: relative;
         isolation: isolate;
@@ -722,12 +774,18 @@ header nav{
         height: 2.25rem;
         border: 0;
         border-radius: 50%;
-        background-color: var(--button-color);
+        background-color: transparent;
         color: var(--secondary-color);
         font-family: var(--font-primary);
         font-size: 1.5rem;
         line-height: 1;
         cursor: pointer;
+        transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    .case-popover-close:hover {
+        background-color: var(--button-color);
+        color: var(--primairy-color);
     }
     
     .article-reverse {
@@ -749,11 +807,11 @@ header nav{
     }
 
     .article-reverse:hover::before {
-        transform: translate(-22%, -138%) rotate(-12deg) scale(1);
+        transform: translate(-10%, -150%) rotate(-10deg) scale(1);
     }
 
     .article-reverse:hover::after {
-        transform: translate(22%, -128%) rotate(12deg) scale(0.95);
+        transform: translate(10%, -140%) rotate(10deg) scale(0.95);
     }
 
     @media (max-width: 768px) {
