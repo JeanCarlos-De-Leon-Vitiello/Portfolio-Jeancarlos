@@ -5,6 +5,7 @@ const casePopoverImage = document.querySelector("#case-popover-image");
 const casePopoverTitle = document.querySelector("#case-popover-title");
 const casePopoverDescription = document.querySelector("#case-popover-description");
 const casePopoverRole = document.querySelector("#case-popover-role");
+const casePopoverTestSection = document.querySelector("#case-popover-test-section");
 const casePopoverTest = document.querySelector("#case-popover-test");
 const casePopoverTools = document.querySelector("#case-popover-tools");
 const casePopoverLink = document.querySelector("#case-popover-link");
@@ -32,7 +33,9 @@ function openCasePopover(event) {
     casePopoverTitle.textContent = projectTitle || "Project";
     casePopoverDescription.textContent = button.dataset.description || "";
     casePopoverRole.textContent = button.dataset.role || "";
-    casePopoverTest.textContent = button.dataset.test || "";
+    const testText = button.dataset.test || "";
+    casePopoverTest.textContent = testText;
+    casePopoverTestSection.hidden = !testText;
     casePopoverTools.textContent = "";
 
     const tools = button.dataset.tools?.split(",").map((tool) => tool.trim()).filter(Boolean) || [];

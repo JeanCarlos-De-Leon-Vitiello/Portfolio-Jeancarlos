@@ -664,7 +664,7 @@ header nav{
         padding: clamp(1.5rem, 4vw, 3rem);
     }
 
-    .case-popover-content p:first-of-type {
+    #case-popover-type {
         font-family: var(--font-primary);
         font-size: var(--font-size-h3);
         color: var(--accent-color);
@@ -696,7 +696,9 @@ header nav{
         color: var(--accent-color);
     }
 
-    .case-popover-content p:not(:first-of-type) {
+    #case-popover-description,
+    #case-popover-role,
+    #case-popover-test {
         font-family: var(--secondairy-font);
         font-size: clamp(1rem, 2vw, 1.25rem);
         line-height: 1.6;
