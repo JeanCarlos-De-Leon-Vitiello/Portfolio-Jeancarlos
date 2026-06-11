@@ -21,16 +21,13 @@
 
     <header>
         <nav>
-            <a href="#home">Jean-Carlo's<br>Portfolio</a>
+            <div class="nav-logo-placeholder" aria-label="Logo placeholder"></div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projecten</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#scroll-container">Articles</a></li>
                 <li><a href="#intro-message">About Me</a></li>
                 <li class="contact-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="39" viewBox="0 0 23 39" fill="none">
-                    <path d="M9.98524 38.0607C10.571 38.6464 11.5208 38.6464 12.1066 38.0607L21.6525 28.5147C22.2383 27.9289 22.2383 26.9792 21.6525 26.3934C21.0667 25.8076 20.117 25.8076 19.5312 26.3934L11.0459 34.8787L2.56062 26.3934C1.97483 25.8076 1.02508 25.8076 0.439296 26.3934C-0.146491 26.9792 -0.146491 27.9289 0.439295 28.5147L9.98524 38.0607ZM11.0459 0L9.5459 -6.55671e-08L9.5459 37L11.0459 37L12.5459 37L12.5459 6.55671e-08L11.0459 0Z" fill="black"/>
-                    </svg>
-                    <a href="https://www.linkedin.com/in/jean-carlos-de-leon-vitiello-136421220/?skipRedirect=true" target="_blank" rel="noopener noreferrer">Contact</a>
+                    <a href="https://www.linkedin.com/in/jean-carlos-de-leon-vitiello-136421220/?skipRedirect=true" target="_blank" rel="noopener noreferrer">Contact Me <span aria-hidden="true">-&gt;</span></a>
                 </li>
             </ul>
             <button class="hamburger">
@@ -43,24 +40,44 @@
         
         <main>
             <section class="hero-section" id="home">
-                <h1>Ik ben<br>Jean-Carlos</h1>
-                <p>Derdejaars CMD-student met een passie voor UX design en development</p>
-
-                <div id="scroll-down">
-                    <span class="borderVertical"></span>
-                    <a href="#intro-message">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="39" viewBox="0 0 23 39" fill="none">
-                        <path d="M9.98524 38.0607C10.571 38.6464 11.5208 38.6464 12.1066 38.0607L21.6525 28.5147C22.2383 27.9289 22.2383 26.9792 21.6525 26.3934C21.0667 25.8076 20.117 25.8076 19.5312 26.3934L11.0459 34.8787L2.56062 26.3934C1.97483 25.8076 1.02508 25.8076 0.439296 26.3934C-0.146491 26.9792 -0.146491 27.9289 0.439295 28.5147L9.98524 38.0607ZM11.0459 0L9.5459 -6.55671e-08L9.5459 37L11.0459 37L12.5459 37L12.5459 6.55671e-08L11.0459 0Z" fill="black"/>
-                        </svg>
-                    </a>
+                <div class="hero-card hero-intro-card">
+                    <p class="hero-eyebrow">UX design & development</p>
+                    <h1>Ik ben<br>Jean-Carlos</h1>
+                    <p>Derdejaars CMD-student met een passie voor UX design en development.</p>
+                    <a class="hero-cta" href="#projects">Bekijk projecten</a>
                 </div>
+
+                <figure class="hero-card hero-media-card hero-media-small">
+                    <img src="images/figmabpro.png" alt="BproCare Figma ontwerp">
+                    <figcaption>UX/UI redesign</figcaption>
+                </figure>
+
+                <figure class="hero-card hero-media-card hero-media-small">
+                    <img src="images/homepagehulppaneel.png" alt="Page Marker hulppaneel">
+                    <figcaption>Human-centered design</figcaption>
+                </figure>
+
+                <figure class="hero-card hero-media-card hero-media-feature">
+                    <img src="images/home-moodflix.png" alt="Moodflix project interface">
+                    <figcaption>
+                        <span>Portfolio showcase</span>
+                        <a href="#projects">Explore</a>
+                    </figcaption>
+                </figure>
             </section>
 
-            <section id="intro-message">
-                <p>Ik ontwerp niet alleen <span>digitale producten</span>, ik onderzoek hoe mensen ze gebruiken. Als CMD-student combineer ik <span>UX-research</span>, <span>usability testing</span> en <code><span class="code-brace">&lbrace;</span><span class="code-word"> development </span><span class="code-brace">&rbrace;</span></code> om gebruiksvriendelijke oplossingen te creeren die zowel esthetisch als functioneel zijn.</p>
-            </section>
+            <section class="featured-section" id="intro-message">
+                <div class="featured-intro">
+                    <p>Ik ontwerp niet alleen <span>digitale producten</span>, ik onderzoek hoe mensen ze gebruiken. Als CMD-student combineer ik <span>UX-research</span>, <span>usability testing</span> en <code><span class="code-brace">&lbrace;</span><span class="code-word"> development </span><span class="code-brace">&rbrace;</span></code> om gebruiksvriendelijke oplossingen te creeren die zowel esthetisch als functioneel zijn.</p>
+                    <a href="#projects">Explore</a>
+                </div>
 
-            <section class="projects" id="projects">
+                <div class="featured-projects-header" id="projects">
+                    <p>Featured Works</p>
+                    <a href="#projects">View all projects</a>
+                </div>
+
+                <div class="projects featured-projects">
                 <article class="project-klm">
                     <div class="info-div">
                         <p>UX/UI Research <span>(Stage)</span></p>
@@ -129,30 +146,7 @@
                     </div>
                 </article>
 
-                <article class="article-reverse project-pagemarker">
-                    <div class="info-div">
-                        <p>Human-Centered Design</p>
-                        <h2>Page Marker</h2>
-                        <p>Ontwerp van een toegankelijk paneel afgestemd op de behoeften van een persoon met een visuele beperking.</p>
-                        <a href="#" class="see-case" 
-                            data-title="Page Marker" 
-                            data-type="Human-Centered Design" 
-                            data-description="Voor mijn minor Web Design & Development heb ik een webextensie ontwikkeld volgens de principes van Human-Centered Design. De opdracht was om een digitale oplossing te ontwerpen voor één specifieke gebruiker met een unieke behoefte. In dit project heb ik samengewerkt met Berend, die door een scotoom geleidelijk zijn zicht verliest en daardoor moeite ervaart met het navigeren op websites.
-Op basis van gesprekken, observaties en feedbacksessies heb ik een hulppaneel ontwikkeld dat Berend ondersteunt bij het gebruik van websites. Met deze tool kan hij een vaste startpositie instellen, zodat hij sneller zijn weg vindt op een pagina. Daarnaast biedt de extensie de mogelijkheid om persoonlijke bladwijzers op te slaan en eenvoudig terug te vinden. Tijdens het ontwikkelproces stonden toegankelijkheid, gebruiksgemak en de specifieke behoeften van de gebruiker centraal." 
-                            data-role="Ik was verantwoordelijk voor het volledige Human-Centered Design-proces, van gebruikersonderzoek en het verzamelen van gebruikersbehoeften tot het ontwerpen, ontwikkelen en testen van de webextensie. Door regelmatig feedback van de gebruiker te verwerken, heb ik de oplossing iteratief verbeterd om optimaal aan zijn behoeften te voldoen."
-                            data-test="Om de extensie te testen, kun je Ctrl + Shift + H gebruiken om het hulppaneel op de website te openen. Hiermee krijg je toegang tot de functies voor het instellen van een startpositie en het beheren van bladwijzers."
-                            data-tools="HTML, CSS, JavaScript, Figma, Gebruikersonderzoek, Prototyping" 
-                            data-image="images/homepagehulppaneel.png" 
-                            data-link="https://jeancarlos-de-leon-vitiello.github.io/HCD-opdracht/">
-                            <span class="dot"></span>
-                            <span>Bekijk Project</span>
-                        </a>
-                    </div>
-
-                    <div class="image-div">
-                        <img src="images/homepagehulppaneel.png" alt="Home scherm page marker">
-                    </div>
-                </article>
+                </div>
             </section>
 
             <section id="scroll-container">
