@@ -165,7 +165,7 @@ header nav{
     flex: none;
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: clamp(0.85rem, 1.6vw, 1.25rem);
     width: min-content;
     height: min-content;
     margin-inline: auto;
@@ -180,20 +180,34 @@ header nav{
         color: inherit;
     }
 
-    .nav-logo-placeholder {
+    .nav-brand {
         flex: 0 0 auto;
-        width: clamp(4rem, 7vw, 6.5rem);
-        height: clamp(1.25rem, 2vw, 1.8rem);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        height: clamp(1.75rem, 2.5vw, 2.1rem);
         margin-left: 0.6rem;
-        border-radius: 100px;
-        background-color: #b9bcc2;
+        padding: 0 0.45rem 0 0;
+    }
+
+    .nav-brand img {
+        display: block;
+        width: clamp(1.55rem, 2.2vw, 1.9rem);
+        height: clamp(1.55rem, 2.2vw, 1.9rem);
+        border-radius: 0.45rem;
+    }
+
+    .nav-brand svg {
+        display: block;
+        width: clamp(4.85rem, 6vw, 5.5rem);
+        height: auto;
     }
 
     ul {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 35px;
+        gap: clamp(0.85rem, 1.6vw, 1.25rem);
         width: min-content;
         height: min-content;
         margin-left: 0;
@@ -215,7 +229,7 @@ header nav{
             display: flex;
             align-items: center;
             height: min-content;
-            padding: 0.55rem 0;
+            padding: 0.55rem 0.8rem;
             border-radius: 100px;
             transition: background-color 0.25s ease;
         }
@@ -237,11 +251,26 @@ header nav{
             justify-content: center;
             gap: 0.45rem;
             height: min-content;
+            line-height: 1;
             padding: 0.65rem 1.25rem;
             border-radius: 100px;
             background-color: #b8ff3d;
             color: #101010;
             transition: background-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .contact-button span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .contact-button svg {
+            display: block;
+            width: 100%;
+            height: 100%;
         }
 
         .contact-button a:hover {
@@ -1284,7 +1313,7 @@ footer {
         header.open { 
         background-color: transparent;
 
-        .nav-logo-placeholder {
+        .nav-brand {
             position: relative;
             z-index: 1002;
         }
