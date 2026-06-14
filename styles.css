@@ -23,7 +23,7 @@ body {
 
 main {
     width: 100%;
-    height: min-content;
+    min-height: 5rem;
     margin: 0;
     padding: 0;
 }
@@ -374,41 +374,27 @@ header nav{
 
         .hero-cta {
             position: relative;
-            isolation: isolate;
-            overflow: hidden;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             width: fit-content;
-            min-height: 3rem;
+            height: min-content;
+            line-height: 1;
             margin-top: 0.25rem;
-            padding-inline: 1.25rem;
+            padding: 0.55rem 1.2rem;
             border-radius: 100px;
-            background-color: var(--button-color);
-            color: var(--secondary-color);
-            font-family: var(--font-primary);
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            background-color: #b8ff3d;
+            color: #101010;
+            font-family: var(--secondairy-font);
+            font-size: clamp(0.82rem, 1vw, 0.95rem);
             text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-
-        .hero-cta::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-color: var(--accent-color);
-            z-index: -1;
-            transform: translateX(-105%) skewX(-18deg);
-            transform-origin: left center;
-            transition: transform 0.45s ease;
+            white-space: nowrap;
+            transition: background-color 0.25s ease, transform 0.25s ease;
         }
 
         .hero-cta:hover {
-            transform: translateY(-0.15rem);
-        }
-
-        .hero-cta:hover::before {
-            transform: translateX(0) skewX(-18deg);
+            background-color: #a9f02f;
+            transform: translateY(-0.08rem);
         }
 
         .hero-media-card {
@@ -462,13 +448,15 @@ header nav{
             align-items: flex-end;
         }
 
-        .hero-media-feature figcaption span {
+        .hero-media-feature figcaption span,
+        .hero-media-small figcaption span {
             max-width: 12rem;
             font-size: clamp(1rem, 1.7vw, 1.35rem);
             font-weight: 700;
         }
 
-        .hero-media-feature figcaption a {
+        .hero-media-feature figcaption a,
+        .hero-media-small figcaption a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -567,7 +555,7 @@ header nav{
     width: 50%;
     height: 1px;
     overflow: hidden;
-    padding: 0 30px;
+    padding: 32px 30px;
     position: relative;
     z-index: 4;
 }
@@ -618,16 +606,31 @@ header nav{
 	}
 }
 
-.featured-intro a,
 .featured-projects-header a {
     width: fit-content;
     padding: 0.45rem 1.1rem;
-    border: 1px solid var(--button-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 100px;
-    color: var(--button-color);
+    color: var(--secondary-color);
     font-family: var(--secondairy-font);
     font-size: clamp(0.9rem, 1.2vw, 1rem);
     line-height: 1;
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.featured-intro a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-height: 2.35rem;
+    padding-inline: 1rem;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    color: var(--primairy-color);
+    font-family: var(--font-primary);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
     text-decoration: none;
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
@@ -647,7 +650,6 @@ header nav{
     height: min-content;
     overflow: hidden;
     padding: 0 30px;
-    border-top: 1px solid rgba(16, 16, 16, 0.18);
     position: relative;
     width: 100%;
 }
@@ -657,7 +659,7 @@ header nav{
     font-size: clamp(0.78rem, 1vw, 0.95rem);
     letter-spacing: 0.35em;
     text-transform: uppercase;
-    color: rgba(16, 16, 16, 0.72);
+    color: var(--secondary-color);
 }
 
 
@@ -972,6 +974,10 @@ header nav{
         .info-div {
             padding-left: 0;
         }
+    }
+
+    .featured-section .article-reverse .info-div {
+        padding-left: clamp(1rem, 1.8vw, 1.5rem);
     }
 
     .article-reverse::before {
