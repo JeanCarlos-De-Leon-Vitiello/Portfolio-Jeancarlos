@@ -339,9 +339,11 @@ header nav{
             grid-row: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            gap: clamp(0.35rem, 1vw, 0.7rem);
+            justify-content: center;
+            align-items: left;
+            gap: clamp(0.75rem, 1.6vw, 1.25rem);
             padding: clamp(1.25rem, 3vw, 2.5rem);
+            text-align: left;
             background-color: color-mix(in srgb, var(--secondary-color) 88%, var(--button-color));
         }
 
