@@ -1210,9 +1210,7 @@ footer {
         align-items: center;
         background-color: var(--secondary-color);
         padding: 1rem 0;
-        left: var(--page-padding);
-        right: var(--page-padding);
-        top: calc(var(--header-height) + 0.75rem);
+        top: 4rem;
         border-radius: 24px;
 
         max-height: 0;
