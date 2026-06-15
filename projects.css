@@ -1,0 +1,157 @@
+.projects-page-title {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: clamp(1.25rem, 3vw, 2.5rem) 20px 0;
+    font-family: var(--font-primary);
+    font-size: clamp(4rem, 8vw, 7.5rem);
+    line-height: 0.88;
+    text-align: left;
+    color: var(--secondary-color);
+}
+
+.projects-page-title span {
+    color: var(--accent-color);
+}
+
+.projects-hero {
+    display: grid;
+    grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1.28fr);
+    align-items: stretch;
+    gap: clamp(0.6rem, 1.2vw, 1rem);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 0 20px clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.projects-hero-intro,
+.projects-hero-feature {
+    height: clamp(18rem, 34vw, 25rem);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.projects-hero-feature {
+    min-height: 0;
+    align-self: stretch;
+}
+
+.projects-hero-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
+    gap: clamp(0.6rem, 1vw, 0.95rem);
+    padding: clamp(0.9rem, 1.6vw, 1.35rem);
+    background-color: #f1f2f5;
+    color: #101010;
+}
+
+.projects-hero-intro > p:first-child {
+    font-family: var(--secondairy-font);
+    font-size: clamp(0.68rem, 0.85vw, 0.8rem);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #5f8cff;
+}
+
+.projects-hero-intro h2 {
+    width: 100%;
+    font-family: var(--secondairy-font);
+    font-size: clamp(1.35rem, 2.2vw, 2.2rem);
+    font-weight: 500;
+    line-height: 1.05;
+    color: #101010;
+}
+
+.projects-hero-intro p:not(:first-child) {
+    max-width: 33rem;
+    font-family: var(--secondairy-font);
+    font-size: clamp(0.78rem, 0.95vw, 0.9rem);
+    line-height: 1.18;
+    color: #101010;
+}
+
+.projects-hero-feature {
+    position: relative;
+    margin: 0;
+    background-color: #151515;
+}
+
+.projects-hero-feature img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects-hero-feature::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 45%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    pointer-events: none;
+}
+
+.projects-hero-feature figcaption {
+    position: absolute;
+    inset: clamp(0.85rem, 1.4vw, 1.25rem);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: var(--secondary-color);
+    font-family: var(--secondairy-font);
+}
+
+.projects-hero-feature figcaption > span {
+    width: fit-content;
+    padding: 0.45rem 0.85rem;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.22);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    backdrop-filter: blur(9px);
+}
+
+.projects-hero-feature figcaption > span::before {
+    content: "";
+    display: inline-block;
+    width: 0.55rem;
+    height: 0.55rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    background-color: #8de063;
+    box-shadow: 0 0 0 0.35rem rgba(141, 224, 99, 0.24);
+}
+
+.projects-hero-feature figcaption p {
+    margin-bottom: 0.45rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.projects-hero-feature figcaption h2 {
+    font-family: var(--secondairy-font);
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    font-weight: 500;
+}
+
+@media (max-width: 980px) {
+    .projects-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-hero-intro,
+    .projects-hero-feature {
+        min-height: auto;
+    }
+
+    .projects-hero-feature {
+        min-height: 28rem;
+    }
+
+}
