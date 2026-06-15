@@ -140,6 +140,82 @@
     font-weight: 500;
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 20px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 0 20px clamp(3rem, 7vw, 6rem);
+}
+
+.project-card {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: clamp(80vh, 85vh, 90vh);
+    border-radius: 0;
+    background-color: color-mix(in srgb, var(--card-surface-color) 86%, var(--secondary-color));
+    transition: background-color 0.3s ease;
+}
+
+.project-card h2,
+.project-card a {
+    opacity: 0;
+    transform: translateY(0.75rem);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.project-card h2 {
+    font-family: var(--secondairy-font);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.project-card a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.35rem;
+    padding-inline: 1rem;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    color: var(--primairy-color);
+    font-family: var(--font-primary);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    text-decoration: none;
+}
+
+.project-card:hover {
+    background-color: var(--accent-color);
+}
+
+.project-card:hover h2,
+.project-card:hover a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card-featured {
+    grid-column: 1 / -1;
+}
+
+.project-card-small {
+    grid-column: span 2;
+    min-height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+.project-card-small h2 {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+}
+
 @media (max-width: 980px) {
     .projects-hero {
         grid-template-columns: 1fr;
@@ -154,4 +230,13 @@
         min-height: 28rem;
     }
 
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card,
+    .project-card-featured,
+    .project-card-small {
+        grid-column: auto;
+    }
 }

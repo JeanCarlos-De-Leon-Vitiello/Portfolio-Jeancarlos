@@ -678,82 +678,6 @@ header nav{
 		width: 100%;
 	}
 
-    article {
-        position: relative;
-        isolation: isolate;
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        gap: clamp(3rem, 7vw, 7rem);
-        width: 100%;
-        padding-block: clamp(2rem, 5vw, 5rem);
-    }
-
-    article::before,
-    article::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: clamp(1rem, 5vw, 4rem);
-        width: clamp(8rem, 22vw, 18rem);
-        aspect-ratio: 16 / 10;
-        background-image: var(--project-before-image);
-        background-size: cover;
-        background-position: center;
-        border-radius: 10px;
-        opacity: 0;
-        pointer-events: none;
-        z-index: -1;
-        transform: translateY(-20%) rotate(0deg) scale(0.92);
-        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-        transition: transform 0.45s ease, opacity 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
-    }
-
-    article::after {
-        background-image: var(--project-after-image);
-        right: clamp(4rem, 13vw, 12rem);
-        transform: translateY(-15%) rotate(0deg) scale(0.88);
-        transition-delay: 0.06s;
-    }
-
-    .project-klm {
-        --project-before-image: url("images/KLM-Logo.jpg");
-        --project-after-image: url("images/mijn-klm-selfie.jpg");
-    }
-
-    .project-bprocare {
-        --project-before-image: url("images/figmabpro.png");
-        --project-after-image: url("images/logobpro.png");
-    }
-
-    .project-moodflix {
-        --project-before-image: url("images/cast.png");
-        --project-after-image: url("images/film.png");
-    }
-
-    .project-pagemarker {
-        --project-before-image: url("images/homepagehulppaneel.png");
-        --project-after-image: url("images/hulppaneel.png");
-    }
-
-    article:hover::before {
-        opacity: 0.9;
-        filter: saturate(1.08);
-        box-shadow: 0 0 2rem color-mix(in srgb, var(--accent-color) 45%, transparent);
-        transform: translate(10%, -150%) rotate(10deg) scale(1);
-    }
-
-    article:hover::after {
-        opacity: 0.7;
-        filter: saturate(1.08);
-        box-shadow: 0 0 1.75rem color-mix(in srgb, var(--accent-color) 35%, transparent);
-        transform: translate(-10%, -140%) rotate(-10deg) scale(0.95);
-    }
-
-    article + article {
-        margin-top: clamp(3rem, 7vw, 6rem);
-    }
-
     .info-div {
         display: flex;
         flex-direction: column;
@@ -841,14 +765,6 @@ header nav{
         }
     }
 
-    article:hover .image-div {
-        transform: translateY(2.5rem);
-        filter: saturate(1.08);
-        box-shadow:
-            0 0 2.5rem color-mix(in srgb, var(--accent-color) 45%, transparent),
-            0 1.4rem 3rem rgba(0, 0, 0, 0.18);
-    }
-
     .featured-projects {
         display: flex;
         flex: 0 0 auto;
@@ -866,6 +782,11 @@ header nav{
 
     .featured-section article,
     .featured-section .article-reverse {
+        position: relative;
+        isolation: isolate;
+        display: flex;
+        align-items: stretch;
+        width: 100%;
         flex: 1 1 0;
         height: 100%;
         max-width: 34rem;
@@ -876,11 +797,6 @@ header nav{
         border-radius: 20px;
         overflow: hidden;
         background-color: #dedfe2;
-    }
-
-    .featured-section article::before,
-    .featured-section article::after {
-        display: none;
     }
 
     .featured-section article + article {
@@ -980,34 +896,11 @@ header nav{
         padding-left: clamp(1rem, 1.8vw, 1.5rem);
     }
 
-    .article-reverse::before {
-        right: auto;
-        left: clamp(1rem, 5vw, 4rem);
-    }
-
-    .article-reverse::after {
-        right: auto;
-        left: clamp(4rem, 13vw, 12rem);
-    }
-
-    .article-reverse:hover::before {
-        transform: translate(-10%, -150%) rotate(-10deg) scale(1);
-    }
-
-    .article-reverse:hover::after {
-        transform: translate(10%, -140%) rotate(10deg) scale(0.95);
-    }
-
     @media (max-width: 768px) {
-        article,
+        .featured-section article,
         .article-reverse {
             flex-direction: column;
             gap: 1.5rem;
-        }
-
-        article::before,
-        article::after {
-            display: none;
         }
 
         .info-div,
