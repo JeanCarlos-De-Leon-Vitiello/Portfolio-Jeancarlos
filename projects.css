@@ -75,69 +75,41 @@
 
 .projects-hero-feature {
     position: relative;
-    margin: 0;
-    background-color: #151515;
-}
-
-.projects-hero-feature img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.projects-hero-feature::after {
-    content: "";
-    position: absolute;
-    inset: auto 0 0;
-    height: 45%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-    pointer-events: none;
-}
-
-.projects-hero-feature figcaption {
-    position: absolute;
-    inset: clamp(0.85rem, 1.4vw, 1.25rem);
-    z-index: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    color: var(--secondary-color);
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: clamp(1rem, 2vw, 1.75rem);
+    background-color: #f1f2f5;
+    color: #101010;
+}
+
+.projects-hero-brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.65rem, 1.4vw, 1rem);
+}
+
+.projects-hero-brand img {
+    display: block;
+    width: clamp(2.25rem, 4vw, 3.5rem);
+    height: clamp(2.25rem, 4vw, 3.5rem);
+}
+
+.projects-hero-brand svg {
+    display: block;
+    width: clamp(7.5rem, 14vw, 12rem);
+    height: auto;
+}
+
+.projects-hero-feature > p {
     font-family: var(--secondairy-font);
-}
-
-.projects-hero-feature figcaption > span {
-    width: fit-content;
-    padding: 0.45rem 0.85rem;
-    border-radius: 100px;
-    background-color: rgba(255, 255, 255, 0.22);
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    backdrop-filter: blur(9px);
-}
-
-.projects-hero-feature figcaption > span::before {
-    content: "";
-    display: inline-block;
-    width: 0.55rem;
-    height: 0.55rem;
-    margin-right: 0.5rem;
-    border-radius: 50%;
-    background-color: #8de063;
-    box-shadow: 0 0 0 0.35rem rgba(141, 224, 99, 0.24);
-}
-
-.projects-hero-feature figcaption p {
-    margin-bottom: 0.45rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-}
-
-.projects-hero-feature figcaption h2 {
-    font-family: var(--secondairy-font);
-    font-size: clamp(1.25rem, 2vw, 2rem);
-    font-weight: 500;
+    font-size: clamp(1rem, 1.6vw, 1.35rem);
+    color: #101010;
+    text-align: center;
 }
 
 .projects-grid {
