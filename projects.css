@@ -197,6 +197,13 @@
     font-family: var(--font-primary);
     font-size: clamp(1rem, 1.5vw, 1.25rem);
     text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.project-card a:hover {
+    background-color: var(--button-color);
+    color: #101010;
+    transform: translateY(-0.08rem);
 }
 
 .project-card:hover {
@@ -240,6 +247,10 @@
     object-fit: contain;
     object-position: center;
     padding: clamp(3rem, 8vw, 5.5rem);
+}
+
+.project-card-boekenzoeker img {
+    object-position: left center;
 }
 
 .project-card-small {
@@ -377,6 +388,10 @@
     object-fit: cover;
 }
 
+.project-case-image-left img {
+    object-position: left center;
+}
+
 .klm-case-overview {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
@@ -443,12 +458,6 @@
     margin: 0;
 }
 
-.klm-case-image-large {
-    grid-column: 1 / -1;
-    min-height: clamp(28rem, 78vh, 50rem);
-    background-color: #f7f8fa;
-}
-
 .klm-case-image img {
     display: block;
     width: 100%;
@@ -510,6 +519,42 @@
     color: rgba(255, 255, 255, 0.76);
 }
 
+.project-link-section {
+    display: flex;
+    justify-content: center;
+    padding-top: clamp(2rem, 4vw, 3.5rem);
+}
+
+.project-link-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    min-height: 3.25rem;
+    padding: 0.9rem 1.7rem;
+    border-radius: 100px;
+    background-color: #b8ff3d;
+    color: #101010;
+    font-family: var(--secondairy-font);
+    font-size: clamp(1rem, 1.35vw, 1.25rem);
+    line-height: 1;
+    text-decoration: none;
+}
+
+.project-link-button span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.45rem;
+    height: 1.45rem;
+}
+
+.project-link-button svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 @media (max-width: 980px) {
     .klm-case-hero,
     .klm-case-overview,
@@ -527,7 +572,6 @@
     }
 
     .klm-case-image,
-    .klm-case-image-large,
     .klm-case-highlight {
         min-height: auto;
         aspect-ratio: 4 / 3;
