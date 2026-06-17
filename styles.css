@@ -1128,6 +1128,51 @@ header nav{
 
 
 
+.blog-empty-state {
+    display: grid;
+    min-height: calc(100vh - var(--header-height));
+    grid-template-columns: minmax(10rem, 0.45fr) minmax(0, 1fr);
+    align-content: center;
+    gap: clamp(1rem, 2vw, 1.5rem);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: clamp(4rem, 8vw, 7rem) 20px;
+    background-color: var(--primairy-color);
+    color: var(--secondary-color);
+}
+
+.blog-empty-state > p:first-child {
+    font-family: var(--secondairy-font);
+    font-size: clamp(0.72rem, 0.9vw, 0.85rem);
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.blog-empty-state > div {
+    display: grid;
+    gap: clamp(1rem, 2vw, 1.4rem);
+    max-width: 72rem;
+}
+
+.blog-empty-state h1 {
+    max-width: 12ch;
+    font-family: var(--font-primary);
+    font-size: clamp(4.5rem, 13vw, 13rem);
+    line-height: 0.82;
+    letter-spacing: 0;
+}
+
+.blog-empty-state > div > p {
+    max-width: 42rem;
+    font-family: var(--secondairy-font);
+    font-size: clamp(1rem, 1.45vw, 1.3rem);
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.72);
+}
+
 /* footer code */
 footer {
     display: grid;
