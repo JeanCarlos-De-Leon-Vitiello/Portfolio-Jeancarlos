@@ -577,7 +577,7 @@ header nav{
     line-height: 1.05;
 
 	span {
-		color: color-mix(in srgb, var(--button-color) 55%, #101010);
+		color: var(--accent-color);
 	}
 
 	code {
@@ -1020,8 +1020,8 @@ header nav{
 		margin-top: 1rem;
 		padding-inline: clamp(1.1rem, 2vw, 1.75rem);
 		border-radius: 100px;
-		background-color: var(--button-color);
-		color: var(--secondary-color);
+		background-color: white;
+		color: black;
 		font-family: var(--font-primary);
 		font-size: clamp(1.1rem, 2vw, 1.5rem);
 		text-decoration: none;
@@ -1040,10 +1040,6 @@ header nav{
 		transform: translateX(-100%) skewX(-18deg);
 		transform-origin: left center;
 		transition: transform 0.45s ease;
-	}
-
-	.scroll-text a:hover {
-		transform: translateY(-0.15rem);
 	}
 
 	.scroll-text a:hover::before {
@@ -1245,6 +1241,15 @@ footer {
 
 
 @media (max-width: 700px) {
+
+    .blog-empty-state {
+        grid-template-columns: 1fr;
+        align-content: center;
+    }
+
+    .blog-empty-state h1 {
+        font-size: clamp(4rem, 18vw, 6.5rem);
+    }
 
     header nav .hamburger {
         display: flex;
