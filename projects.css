@@ -465,6 +465,10 @@
     object-fit: cover;
 }
 
+.project-atlas-main-image img {
+    object-position: left center;
+}
+
 .klm-case-highlight {
     display: flex;
     flex-direction: column;
