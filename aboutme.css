@@ -448,6 +448,34 @@ body:has(.about-hero) header nav {
     }
 }
 
+@media (max-height: 800px) and (min-width: 901px) {
+    .about-hero-copy {
+        max-width: min(46rem, 52vw);
+    }
+
+    .about-hero h1 {
+        max-width: 46rem;
+        font-size: clamp(2rem, 2.8vw, 3rem);
+    }
+
+    .about-gallery-card-large {
+        top: -6rem;
+        width: clamp(7rem, 12vw, 10rem);
+    }
+
+    .about-gallery-card-left {
+        top: 9%;
+        left: clamp(-1rem, 6vw, 6rem);
+        width: clamp(9rem, 14vw, 13rem);
+    }
+
+    .about-gallery-card-right {
+        top: 9%;
+        right: clamp(-1rem, 6vw, 6rem);
+        width: clamp(9rem, 14vw, 13rem);
+    }
+}
+
 @media (max-width: 620px) {
     .about-hero {
         height: auto;

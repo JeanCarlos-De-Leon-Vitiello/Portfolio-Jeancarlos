@@ -333,9 +333,10 @@ header nav{
 .hero-section {
         position: relative;
         height: calc(100vh - var(--header-height));
+        min-height: 50rem;
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        grid-template-rows: minmax(18rem, 1.25fr) minmax(13rem, 0.85fr);
+        grid-template-rows: minmax(30rem, 1.25fr) minmax(13rem, 0.85fr);
         gap: clamp(0.35rem, 0.8vw, 0.7rem);
         width: 100vw;
         margin-left: calc(50% - 50vw);
@@ -355,8 +356,9 @@ header nav{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: left;
+            align-items: flex-start;
             gap: clamp(0.75rem, 1.6vw, 1.25rem);
+            min-height: 30rem;
             padding: clamp(1.25rem, 3vw, 2.5rem);
             text-align: left;
             background-color: color-mix(in srgb, var(--secondary-color) 88%, var(--button-color));
@@ -515,7 +517,7 @@ header nav{
     @media (max-width: 620px) {
         .hero-section {
             height: auto;
-            min-height: calc(100vh - var(--header-height));
+            min-height: max(50rem, calc(100vh - var(--header-height)));
             padding-top: 0.75rem;
             grid-template-columns: 1fr;
             grid-template-rows: auto;
@@ -923,16 +925,44 @@ header nav{
 
     @media (max-width: 620px) {
         .featured-section {
-            grid-template-rows: auto auto auto;
+            height: auto;
+            min-height: 0;
+            overflow: visible;
+            padding: clamp(3rem, 12vw, 5rem) 20px clamp(3rem, 10vw, 4rem);
+            gap: clamp(1rem, 5vw, 2rem);
+        }
+
+        .featured-intro {
+            flex: 0 0 auto;
+            width: 100%;
+            height: auto;
+            overflow: visible;
+            gap: clamp(1rem, 5vw, 1.5rem);
+            padding: 0 clamp(1rem, 6vw, 2rem);
+        }
+
+        .featured-intro p {
+            max-width: 100%;
+            font-size: clamp(1.7rem, 8vw, 2.35rem);
+            line-height: 1.08;
+        }
+
+        .featured-intro a {
+            margin-top: 0.5rem;
         }
 
         .featured-projects-header {
             align-items: flex-start;
             flex-direction: column;
+            gap: 0.75rem;
+            padding: 0 clamp(1rem, 6vw, 2rem);
         }
 
         .featured-projects {
-            grid-template-columns: 1fr;
+            flex-direction: column;
+            align-items: stretch;
+            height: auto;
+            padding: 0;
         }
     }
 
@@ -963,6 +993,16 @@ header nav{
         .image-div {
             max-height: none;
             aspect-ratio: 4 / 3;
+        }
+    }
+
+    @media (max-width: 620px) {
+        .featured-section article,
+        .featured-section .article-reverse {
+            flex: 0 0 auto;
+            max-width: none;
+            height: 16rem;
+            gap: 0;
         }
     }
 
