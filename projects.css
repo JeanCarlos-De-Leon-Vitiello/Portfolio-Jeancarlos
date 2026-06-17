@@ -53,7 +53,7 @@
     font-size: clamp(0.68rem, 0.85vw, 0.8rem);
     letter-spacing: 0.35em;
     text-transform: uppercase;
-    color: #5f8cff;
+    color: var(--accent-color);
 }
 
 .projects-hero-intro h2 {
@@ -191,7 +191,7 @@
     justify-content: center;
     min-height: 2.35rem;
     padding-inline: 1rem;
-    border-radius: 8px;
+    border-radius: 100px;
     background-color: var(--secondary-color);
     color: var(--primairy-color);
     font-family: var(--font-primary);
